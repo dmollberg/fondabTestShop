@@ -26,6 +26,7 @@ namespace fondabTestShop.Models
         [DisplayName("Beskrivning")]
         public string Description { get; set; }
 
+        [Required(ErrorMessage = "Du måste fylla i pris.")]
         [Range(1, 10000, ErrorMessage = "Priset får vara minst 1kr och max 10000kr.")]
         [DisplayName("Pris")]
         public int price { get; set; }

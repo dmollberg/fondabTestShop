@@ -6,28 +6,11 @@
 
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <a href="/Articles/Create" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-plus"></span> Ny artikel</a>
 </p>
+<hr />
 
 
-
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ArticleNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.price)
-        </th>
-        <th></th>
-    </tr>
-</table>*@
 
 
     @{int i = 0;}
@@ -58,6 +41,7 @@
 </div>
 
 
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -66,17 +50,16 @@
                 <h4 class="modal-title" id="myModalLabel">Ta bort artikel</h4>
             </div>
             <div class="modal-body">
-                Är du säker på att du vill ta bort "<span id="spanUser"></span>"?
+                Är du säker på att du vill ta bort artikeln "<span id="spanUser"></span>"?
             </div>
             <div class="modal-footer">
                 <div id="testOutput"></div>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Avbryt</button>
-                <a href="" id="deleteLink" class="btn btn-danger">Ta bort</a>
+                <a href="" id="deleteLink" class="btn btn-danger"><span class="glyphicon glyphicon-minus-sign"></span> Ta bort</a>
             </div>
         </div>
     </div>
 </div>
-
 
 
 
@@ -93,5 +76,4 @@
         $('#myModal').modal();
 
     });
-
 </script>
